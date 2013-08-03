@@ -1,0 +1,251 @@
+/* html5doctor.com Reset Stylesheet v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark - http://richclarkdesign.com | Twitter: @rich_clark */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}nav ul,nav ol{list-style:none;list-style-image:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}mark{font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize | trimmed by Marco 'Xmas' Colombo on 2012-10-07 */
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a:focus,a:active,a:hover{outline:0}b,strong{font-weight:bold}dfn{font-style:italic}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure,form{margin:0}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-family:sans-serif;font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/***************************************
+* Custom fonts stylesheet
+***************************************/
+
+/***************************************
+* use same font-family name for all fonts in the same family,
+* change styles and weights in right order as listed below
+*
+* Font declaration order:
+* 1) Weights
+*    a) 400 // normal
+*    b) 700 // bold
+*    c) 200 // light
+* 2) Styles
+*    a) normal
+*    b) italic
+* 3) Mixed [optional]
+*    a) bold-italic
+*    b) light-italic
+*    c) ...
+***************************************/
+
+/*
+@font-face {
+    font-family: 'FONT_FAMILY';
+    src: url('../fonts/FONT_FILE.eot');
+    src: url('../fonts/FONT_FILE.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FONT_FILE.woff') format('woff'),
+         url('../fonts/FONT_FILE.ttf') format('truetype'),
+         url('../fonts/FONT_FILE.svg#hello_typeregular') format('svg');
+    font-weight: XXX;
+    font-style: normal/italic;
+}
+*/
+
+/***************************************
+* General setup and helpers 
+***************************************/
+
+/***************************************
+* Keep the footer always at the bottom
+***************************************/
+
+html, body {
+    height : 100%;
+}
+
+.container {
+    min-height : 100%;
+    position   : relative;
+}
+
+.content {
+    padding-bottom : 10px; /* this has to be at least equal to the outer height of the footer (border, padding, and margin included). */
+}
+
+footer {
+    height   : auto; /* this has to be set to some value different from zero, auto may work either */
+    position : absolute;
+    bottom   : 0;
+    left     : 0;
+}
+
+
+
+/***************************************
+* Clearfix class
+*
+* For modern browsers:
+* 1. The space content is one way to avoid an Opera bug when the contenteditable attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements that are clearfixed.
+* 2. The use of "table" rather than "block" is only necessary if using ":before" to contain the top-margins of child elements.
+***************************************/
+
+.cf:before, .cf:after {
+    content : " ";   /* see 1 */
+    display : table; /* see 2 */
+}
+
+.cf:after {
+    clear : both;
+}
+
+.lt-ie8 .cf {
+    zoom : 1; /* for IE 6/7 only, include this rule to trigger "hasLayout: 1" on the floats container. */
+}
+
+
+
+/***************************************
+* Helpers and Fixes
+***************************************/
+
+.red-bg {
+    background-color : #f00;
+}
+
+.green-bg {
+    background-color : #0f0;
+}
+
+.blue-bg {
+    background-color : #00f;
+}
+
+.white-bg {
+    background-color : #fff;
+}
+
+.black-bg {
+    background-color : #000;
+}
+
+.wrapped {
+    display      : block;
+    position     : relative;
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+.col {
+    position : relative;
+    float    : left;
+}
+
+html, body {
+    height : 100%;
+    width  : 100%;
+}
+
+.container, header, .content, footer{
+    width : 100%;
+}
+
+ul {
+    list-style : none;
+}
+
+img, a {
+    -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
+    -webkit-user-select         : none;
+    -khtml-user-select          : none;
+    -moz-user-select            : none;
+    -ms-user-select             : none;
+    user-select                 : none;
+}
+
+textarea {
+    padding : 0;
+    resize  : none;
+    display : block;
+}
+
+h1 {
+    padding: 15px;
+}
+/***************************************
+* Structure
+***************************************/
+.responsive-menu {
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.responsive-menu-voice {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+/***************************************
+* Styles goes here
+***************************************/
+.main-menu {
+  background: #e9e9e9;
+}
+.main-menu a {
+  padding: 0 5px;
+  color: #333;
+  font: 400 14px/14px Arial, Helvetica, Sans-Serif;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.main-menu .main-menu-voice {
+  background: #e9e9e9;
+}
+.main-menu .main-menu-voice:hover {
+  background: #e0e0e0;
+}
+.main-menu .main-menu-voice:hover a {
+  text-decoration: underline;
+}
+/***************************************
+* mediaquery overrides
+***************************************/
+/* Landscape phone to portrait tablet */
+@media only screen and (max-width: 768px) {
+  /***************************************
+* Structure
+***************************************/
+  .responsive-menu:before {
+    /* responsive-menu-opener.png width 30px, height 30px */
+    content: url('../gfx/responsive-menu-opener.png');/* opener's height should match wrapper height */
+  }
+  .responsive-menu:active,
+  .responsive-menu:hover {
+    height: auto;
+  }
+  .responsive-menu:active:before,
+  .responsive-menu:hover:before {
+    /* hover status for menu opener, just override content:...; */
+    content: url('../gfx/responsive-menu-opener-hover.png');
+  }
+  .responsive-menu {
+    height: 30px;/* wrapper height should match opener's height */
+  }
+  .responsive-menu-voices {
+    margin: 0;
+  }
+  .responsive-menu-voice {
+    float: none;
+  }
+  .responsive-menu-voice-link {
+    display: block;
+  }
+  /***************************************
+* Styles goes here
+***************************************/
+  .main-menu {
+    background: #d5d5d5;
+  }
+  .main-menu a {
+    line-height: 35px;
+  }
+  .main-menu .main-menu-voice {
+    height: 35px;
+    line-height: 35px;
+  }
+  .main-menu .main-menu-voice:active a,
+  .main-menu .main-menu-voice:hover a {
+    text-decoration: none;
+    padding-left: 10px;
+  }
+} /***************************************
+* Puts your IE specific styles here
+***************************************/
